@@ -35,6 +35,7 @@ public class UserController {
 		userList.add(user2);
 		userList.add(user3);
 		model.addAttribute("list",userList);
+		//发送到发送到发送到
 		return "userlist";
 	}
 	@RequestMapping("/show")
