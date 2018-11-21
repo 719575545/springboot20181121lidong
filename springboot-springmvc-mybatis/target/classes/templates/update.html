@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>user info</title>
+</head>
+<body>
+	<form th:action="@{/user/updateuser}" method="post">
+		<input type="hidden" name="id" th:field="${user.id}"/>
+		用户名:<input type="text" name="username" th:field="${user.username}"/><br>
+		年龄:<input type="text" name="userage" th:field="${user.userage}"/><br>
+		<input type="submit" value="update"/>
+	</form>
+</body>
+</html>

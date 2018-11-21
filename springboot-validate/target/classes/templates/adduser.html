@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>add user</title>
+</head>
+<body>
+	<form th:action="@{/addUser}" method="post">
+		username:<input type="text" name="username"/><font color="red" th:errors="${u.username}"/><br/>
+		password:<input type="text" name="password"/><font color="red" th:errors="${u.password}"/><br/>
+		age:<input type="text" name="age"/><font color="red" th:errors="${u.age}"/><br/>
+		<input type="submit" value="confirm"/>
+	</form>
+</body>
+</html>

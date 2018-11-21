@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>userlist</title>
+</head>
+<body>
+	<table border="1" align="center">
+		<tr>
+			<th>id</th>
+			<th>name</th>
+			<th>age</th>
+			<th>operate</th>
+		</tr>
+		<tr th:each="user:${users}" >
+			<td th:text="${user.id}"></td>
+			<td th:text="${user.username}"></td>
+			<td th:text="${user.userage}"></td>
+			<td><a th:href="@{/user/delete(id=${user.id})}">delete</a><br/><a th:href="@{/user/selectUserByid(id=${user.id})}">update</a></td>
+		</tr>
+	</table>
+</body>
+</html>
