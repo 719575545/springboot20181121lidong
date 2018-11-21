@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
 	@RequestMapping("/{page}")
 	public String toPage(@PathVariable String page) {
-		System.out.println("sdf很个房间风格");
+		System.out.println("sdf很个房间风格fsdfsfs");
 		return page;
 	}
 }
