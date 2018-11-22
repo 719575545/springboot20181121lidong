@@ -10,6 +10,6 @@ import com.liodng.pojo.User;
  * @author lidong
  *
  */
-public interface UserRep extends JpaRepository<User, Integer> {
+public interface UserJpaRep extends JpaRepository<User, Integer> {
 
 }
