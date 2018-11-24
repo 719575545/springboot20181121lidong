@@ -1,16 +1,15 @@
 package com.liodng.pojo;
 
-import javax.persistence.CascadeType;
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
-public class User {
+public class User implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
@@ -21,9 +20,6 @@ public class User {
 	private Integer age;
 	@Column(name="address")
 	private String address;
-	@ManyToOne(cascade=CascadeType.PERSIST)
-	@JoinColumn(name="roleid")
-	private Role role;
 	public Integer getId() {
 		return id;
 	}
@@ -47,13 +43,6 @@ public class User {
 	}
 	public void setAddress(String address) {
 		this.address = address;
-	}
-	
-	public Role getRole() {
-		return role;
-	}
-	public void setRole(Role role) {
-		this.role = role;
 	}
 	@Override
 	public String toString() {
