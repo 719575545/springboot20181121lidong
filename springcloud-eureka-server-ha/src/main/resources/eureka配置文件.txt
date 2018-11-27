@@ -1,0 +1,17 @@
+spring.application.name=eureka-server
+server.port=8761
+#当前注册中心的主机名
+eureka.instance.hostname=eureka2
+#设置服务注册中心地址，执行另一个注册中心
+#以下是开启 了http basic安全认证的请求方式
+#eureka.client.serviceUrl.defaultZone=http://root:123456@eureka1:8761/eureka/
+#如果没有开启安全认证的请求方式如下，也就是不用加root:root@
+eureka.client.serviceUrl.defaultZone=http://eureka1:8761/eureka/
+#关闭自我保护 true为开启  false为关闭
+eureka.server.enableSelfPreservation=false
+#清理不正常服务，单位是毫秒，默认为60*1000
+eureka.server.eviction.interval-timer-in-ms=6000
+#开启httpbasic安全认证
+#security.basic.enabled=true
+#security.user.name=root
+#security.password=123456
